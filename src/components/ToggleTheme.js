@@ -13,7 +13,7 @@ const DarkCircle = () => {
     );
 }
 const ToggleTheme = () =>{
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
     const toggleTheme = () => {
         if(theme==='light')  setTheme('dark');
         else setTheme('light');
