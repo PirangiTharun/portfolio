@@ -1,24 +1,25 @@
-* {
-  transition: all 0.02s ease-in-out;
-}
 
 .light-theme {
-  --background-color: white;
+  --background-color: #f1f1f1;
   --switch-color: #1d1f21;
+  --second-tone: #0EA5E9;
   color: black;
 }
 .dark-theme {
   --background-color: #1d1f21;
-  --switch-color: white;
-  color: white;
+  --switch-color: #f1f1f1;
+  --second-tone: #0EA5E9;
+  color: #f1f1f1;
 }
 .container {
   background: var(--background-color);
   height: 100svh;
+  padding: 0 16px;
 }
 .bodyContainer {
   height: 75svh;
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: center;
 }
@@ -41,12 +42,20 @@
   font-size: 20px;
   font-weight: 600;
 }
+.navbar > li:hover {
+  color: var(--second-tone);
+  cursor: pointer;
+}
 
 .header {
   padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.heading {
+  color: var(--second-tone);
 }
 
 .theme-switch {
@@ -74,7 +83,7 @@
 }
 
 .light-circle {
-  background-color: white;
+  background-color: #f1f1f1;
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -101,17 +110,98 @@
 }
 
 .primary-btn {
-  font-size: 24px;
-  border-radius: 8px;
-  padding: 4px 8px;
-  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 500;
   cursor: pointer;
+  background-color: var(--second-tone);
+  border: none;
+  color: #f1f1f1;
+}
+.primary-btn:hover {
+  background-color: #0284c7;
+  color: white;
 }
 
 .secondary-btn {
-  font-size: 24px;
-  border-radius: 8px;
-  padding: 4px 8px;
-  font-weight: 600;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 500;
   cursor: pointer;
+  background-color: #04b4e005;
+  border: 1px solid #04b4e0;
+  color: #04b4e0;
+}
+
+.secondary-btn:hover {
+  background-color: #04b4e010;
+}
+.title {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menuIcon {
+  display: none;
+}
+.menuIcon > img {
+  height: 32px;
+  width: 32px;
+}
+.nextLine {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 640px) {
+  .bodyContainer{
+    flex-direction: row-reverse;
+  }
+  .navbar >li {
+    display: none;
+  }
+  .dp {
+    width: 220px;
+    height: 220px;
+    padding: 45px 0;
+  }
+  .heading {
+    font-size: 24px;
+  }
+  .mainHeading {
+    font-size: 32px;
+    text-align: center;
+  }
+  .mainHeading > .heading{
+    font-size: 32px;
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .btns {
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome {
+    margin: auto;
+  }
+  .menuIcon {
+    display: inline !important;
+  }
+  .header {
+    padding: 0;
+  }
+  .nextLine {
+    font-size: 22px;
+    font-weight: 400;
+  }
 }

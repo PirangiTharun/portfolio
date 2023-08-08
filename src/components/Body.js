@@ -1,18 +1,23 @@
 import dp from '../assets/DP.jpg'
+// import resume from '../../public/Tharun_Resume.pdf';
 const Body = () => {
     return (
       <div className="bodyContainer">
         <div>
           <div className="welcome">Welcome to my portfolio</div>
           <h1 className="mainHeading">
-            Hi👋, I'm Tharun Pirangi
+            Hi👋, I'm   <span className='heading'>Tharun Pirangi</span>
             <br />
-            <span style={{fontSize: '32px', fontWeight: '400'}}>Software Engineer @ TCS</span>
+            <span className='title'>Software Engineer @ TCS</span>
+            <br />
+            <span className='nextLine'>Passionate about building scalable web applications</span>
           </h1>
-          <div>
+          <div className='btns'>
+            <a href={"https://drive.google.com/file/d/1d2ebdK6SnpJlpurov_7jengvqDH0LZQp/view?usp=sharing"} target='_blank' rel="noreferrer">
             <button style={{ marginRight: "16px" }} className="primary-btn">
-              Download Resume
+              View Resume
             </button>
+            </a>
             <button className="secondary-btn">Connect</button>
           </div>
         </div>
