@@ -12,9 +12,8 @@ const DarkCircle = () => {
         <div className='dark-circle'></div>
     );
 }
-const ToggleTheme = () =>{
-    const selectedTheme = localStorage.getItem('theme');
-    const [theme, setTheme] = useState(selectedTheme);
+const ToggleTheme = ({theme, setTheme}) =>{
+    
     const toggleTheme = () => {
         if(theme==='light')  {
             setTheme("dark");

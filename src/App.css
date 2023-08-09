@@ -3,21 +3,28 @@
   --background-color: #f1f1f1;
   --switch-color: #1d1f21;
   --second-tone: #0EA5E9;
+  --third-tone: white;
   color: black;
 }
 .dark-theme {
   --background-color: #1d1f21;
   --switch-color: #f1f1f1;
   --second-tone: #0EA5E9;
+  --third-tone: #393d3f;
   color: #f1f1f1;
+}
+body {
+  background: var(--background-color);
 }
 .container {
   background: var(--background-color);
-  height: 100svh;
+  min-height: 100svh;
   padding: 0 16px;
 }
 .bodyContainer {
-  height: 75svh;
+  /* height: auto; */
+  margin-top: 12%;
+  padding-bottom: 10%;
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
@@ -160,6 +167,29 @@
   font-weight: 400;
 }
 
+.menuList {
+  list-style: none;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+
+.menuList > li {
+  margin: 20px 0;
+}
+.menuList > li:hover {
+  color: var(--second-tone);
+  cursor: pointer;
+}
+
+.horizontalLine {
+  width: 100%;
+  border: 1px solid var(--switch-color);
+  margin: 42px 0 0 0;
+}
+
 
 @media screen and (max-width: 640px) {
   .bodyContainer{
@@ -167,6 +197,9 @@
   }
   .navbar >li {
     display: none;
+  }
+  .menuList {
+    display: inline;
   }
   .dp {
     width: 220px;

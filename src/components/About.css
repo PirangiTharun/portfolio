@@ -1,0 +1,20 @@
+.headText {
+    font-size: 50px;
+}
+
+.about {
+    font-size: 28px;
+}
+
+.aboutContainer {
+    padding: 0 10%;
+}
+
+.experienceContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--third-tone);
+    padding: 8px 32px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
