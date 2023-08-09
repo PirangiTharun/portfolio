@@ -13,10 +13,17 @@ const DarkCircle = () => {
     );
 }
 const ToggleTheme = () =>{
-    const [theme, setTheme] = useState('dark');
+    const selectedTheme = localStorage.getItem('theme');
+    const [theme, setTheme] = useState(selectedTheme);
     const toggleTheme = () => {
-        if(theme==='light')  setTheme('dark');
-        else setTheme('light');
+        if(theme==='light')  {
+            setTheme("dark");
+            localStorage.setItem("theme", "dark");
+        }
+        else {
+            setTheme("light");
+            localStorage.setItem("theme", "light");
+        }
     }
     useEffect(()=>{
         if(theme==='light'){
