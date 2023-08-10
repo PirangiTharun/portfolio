@@ -4,6 +4,7 @@ import menuLight from "../assets/menu-light.png";
 import menu from '../assets/menu.png';
 import cross from '../assets/cross.png';
 import crossLight from '../assets/cross-light.png';
+import { Link, useLocation} from 'react-router-dom';
 
 import { useState } from 'react';
 
@@ -13,15 +14,17 @@ const Header = ({menuExpanded, setMenuExpanded}) => {
     const handleMenuIcon = () => {
         setMenuExpanded(!menuExpanded);
     }
+    const location = useLocation();
+    const pathName=location.pathname;
     return (
         <div className='header'>
             <h1 className='heading'>Tharun Pirangi</h1>
             <nav className='navbar'>
                 <ToggleTheme theme={theme} setTheme={setTheme} />
-                <li>Home</li>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><Link style={pathName==='/'?{color: '#0EA5E9'}:{}} className='links' to="/">Home</Link></li>
+                <li><Link style={pathName==='/about'?{color: '#0EA5E9'}:{}} className='links' to="/about">About</Link></li>
+                <li><Link style={pathName==='/projects'?{color: '#0EA5E9'}:{}} className='links' to="/projects">Projects</Link></li>
+                <li><Link style={pathName==='/contact'?{color: '#0EA5E9'}:{}} className='links' to="/contact">Contact</Link></li>
                 <li className='menuIcon'>{
                     menuExpanded? <img onClick={handleMenuIcon} src={theme==='light'?cross: crossLight} alt="" />  :
                      <img onClick={handleMenuIcon} src={theme==='light'? menu: menuLight} alt="" />

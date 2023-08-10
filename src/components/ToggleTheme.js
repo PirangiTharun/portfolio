@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import '../App.css';
 import moon from '../assets/moon.png';
 import sun from '../assets/sun.png';
