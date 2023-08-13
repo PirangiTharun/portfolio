@@ -1,4 +1,5 @@
 import dp from '../assets/DP.jpg'
+import { Link } from 'react-router-dom';
 // import resume from '../../public/Tharun_Resume.pdf';
 const Body = () => {
     return (
@@ -18,7 +19,7 @@ const Body = () => {
               View Resume
             </button>
             </a>
-            <button className="secondary-btn">Connect</button>
+            <button className="secondary-btn"><Link style={{color:'inherit', textDecoration: 'none'}} to="/contact">Connect</Link></button>
           </div>
         </div>
         <img className="dp" src={dp} alt="" />

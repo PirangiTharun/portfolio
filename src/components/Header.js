@@ -18,7 +18,7 @@ const Header = ({menuExpanded, setMenuExpanded}) => {
     const pathName=location.pathname;
     return (
         <div className='header'>
-            <h1 className='heading'>Tharun Pirangi</h1>
+            <h1 className='heading'><Link style={{color:'inherit', textDecoration: 'none'}} to="/">Tharun Pirangi</Link></h1>
             <nav className='navbar'>
                 <ToggleTheme theme={theme} setTheme={setTheme} />
                 <li><Link style={pathName==='/'?{color: '#0EA5E9'}:{}} className='links' to="/">Home</Link></li>
